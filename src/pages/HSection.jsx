@@ -5,13 +5,11 @@ import {
   HorizontalScrollPanel,
 } from "../components/HorizontalScroll";
 
-import Welcome from "./Welcome";
 import NextStep from "../components/NextStep";
 
-export default function Home() {
+export default function HSection() {
   return (
     <main className="size-full overflow-x-hidden">
-      <Welcome />
       <HorizontalScroll name="panel">
         <HorizontalScrollPanel className="bg-red-200">
           red

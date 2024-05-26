@@ -1,20 +1,16 @@
-"use client";
 import React from "react";
-import { FloatingNav } from "../components/ui/floating-navbar";
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+
+import { FloatNav } from "./FloatNav";
+
 export function Navbar() {
-  const navItems = [
-    {
-      name: "Home",
-      link: "/",
-      icon: (
-        <IconHome className="blur-md h-4 w-4 text-neutral-500 dark:text-white" />
-      ),
-    },
-  ];
   return (
-    <div className="relative  w-full">
-      <FloatingNav navItems={navItems} />
-    </div>
+    <nav className="fixed w-full top-0 z-10 backdrop-filter firefox:bg-opacity-90 border-b border-violet-400/10 backdrop-blur-lg">
+      <div className="px-10 h-20 flex items-center justify-between">
+        <div className="">
+          <span className="text-2xl text-gray-900 font-semibold">Logo</span>
+          <FloatNav />
+        </div>
+      </div>
+    </nav>
   );
 }
